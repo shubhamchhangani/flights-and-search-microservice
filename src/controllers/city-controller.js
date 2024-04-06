@@ -1,4 +1,4 @@
-const { CityService } = require("../services/index");
+const { CityService } = require("../services/index.js");
 
 const cityService = new CityService();
 
@@ -12,6 +12,7 @@ const create = async (req, res) => {
       err: {},
     });
   } catch (error) {
+    console.log("something went wrong with city controller");
     return res.status(501).json({
       data: {},
       success: false,
@@ -31,6 +32,7 @@ const destroy = async (req, res) => {
       err: {},
     });
   } catch (error) {
+    console.log("something went wrong with city controller");
     return res.status(501).json({
       data: {},
       success: false,
@@ -51,6 +53,7 @@ const update = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    console.log("something went wrong with city controller");
     return res.status(500).json({
       data: {},
       success: false,
@@ -70,6 +73,7 @@ const get = async (req, res) => {
       err: {},
     });
   } catch (error) {
+    console.log("something went wrong with city controller");
     return res.status(501).json({
       data: {},
       success: false,
